@@ -1,0 +1,104 @@
+/*--------------------------------------------------------
+ESTILOS PAGE SERVICIOS
+--------------------------------------------------------*/
+.container-fluid{
+    .contenido2{
+        .servicios{
+            display: grid;
+            grid-template-areas: "caja1"
+                                "caja2"
+                                "caja3"
+                                "caja4";
+            grid-template-columns: 1fr;
+            grid-gap: 1rem;
+            margin: 5%;
+            .servicioDer{
+                grid-area: caja1;
+                margin: 0% 23% 0% 0px ;
+                @include border(0px);
+                @extend%cajas-general;
+                @media screen and (max-width:1024px){
+                    margin: 0%;
+                    }
+                @media screen and (max-width:768px){
+                    flex-direction: column;
+                    margin: 0%;
+                }
+                .imgServicio1{
+                    width:30%;
+                    border-radius: 20px 0px 0px 20px;
+                    @media screen and (max-width:1024px){
+                        width: 30%;
+                    }
+                    @media screen and (max-width:768px){
+                        width: 100%;
+                        border-radius: 20px 20px 0px 0;
+                    }
+                }
+                .descripcionServicio{
+                    .textoDeCajas{
+                        @extend%text-servicios;
+                    }
+                }  
+            }
+            .servicioIzq{
+                grid-area: caja2;
+                margin: 0% 0% 0% 23% ;
+                flex-direction: row-reverse;
+                @include border(0px);
+                @extend%cajas-general;
+                @media screen and (max-width:1024px){
+                    margin: 0%;
+                    }
+                @media screen and (max-width:768px){
+                    flex-direction: column;
+                    margin: 0%;
+                    }
+                .imgServicio2{
+                    width: 30%;
+                    border-radius: 0px 20px 20px 0px;
+                    @media screen and (max-width:1024px){
+                        width: 30%;
+                    }
+                    @media screen and (max-width:768px){
+                        width: 100%;
+                        border-radius: 20px 20px 0px 0;
+                    }
+                }
+                .descripcionServicio{
+                    .textoDeCajas{
+                        @extend%text-servicios;
+                    }
+                } 
+            }
+            .servicioDer--grid{
+                grid-area: caja3;
+            }
+            .servicioIzq--grid{
+                grid-area: caja4;
+            }
+        }
+        .imgPresupuesto{ 
+            width: 8%;
+            position: fixed;
+            top: 75%;
+            right:5%;
+            animation-name: presupuesto;
+            animation-iteration-count: infinite;
+            animation-duration: 0.5s;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+            @media screen and (max-width:768px){
+                width: 25%;
+                }   
+            @keyframes presupuesto{
+                from{
+                    transform: rotate(0.95turn);
+                }
+                to{
+                    transform: rotate(1.05turn);
+                }
+            }
+        }
+    }
+}

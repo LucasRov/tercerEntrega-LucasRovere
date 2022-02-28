@@ -1,0 +1,72 @@
+
+
+/*--------------------------------------
+   ESTILOS PAGE NUESTROS CLIENTES
+   --------------------------------------*/
+
+.container-fluid{
+    main{
+        .cajaClientes{
+            grid-template-columns: 1fr;
+            @media screen and (max-width:768px){
+                margin: 20% 0% 0%;
+                }
+            .descripcionCliente{
+                span{
+                display: flex;
+                justify-content: center;
+                font-size: calc(1.5em + 1vw);
+                color: black;
+                    @media screen and (max-width:768px){
+                        text-align: center;
+                        font-size: 2rem;
+                    }
+                }
+                .clientes{
+                    @extend%fondo-cliente;
+                    @extend%media-clientes;
+                    p{
+                        @extend%texto-cliente;
+                    }
+                    .cajaImg{
+                       @extend%caja-imagenes;
+                        .img1{
+                            @extend%imagen-principal;
+                            @media screen and (max-width:768px){
+                                width: 40%;
+                            }
+                        }
+                        .img2{
+                            margin: 0 5% 13% 0;
+                            @extend%imagen-secundaria;
+                            @media screen and (max-width:768px){
+                                width: 35%;
+                            }
+                            &:hover{
+                                width: 30%;
+                                z-index: 100;
+                                @media screen and (max-width:768px){
+                                    width: 40%;
+                                }
+                            } 
+                        }
+                        .img3{
+                            margin: 13% 0 0% 0%;
+                            @extend%imagen-secundaria;
+                            @media screen and (max-width:768px){
+                                width: 35%;
+                            }
+                            &:hover{
+                                width: 30%;
+                                z-index: 100;
+                                @media screen and (max-width:768px){
+                                    width: 40%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }  
+}
